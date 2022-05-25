@@ -6,9 +6,77 @@ namespace dnd
     {
         static void Main(string[] args)
         {
-            Class Class = new Class();
-            Class.clases();
-            
+            // Class objects
+            Name N = new Name();
+            Class C = new Class();
+            Race R = new Race();
+            Stats S = new Stats();
+
+            // set name, race, and class
+            string n = N.name();
+            string r = R.races();
+            string c = C.clases();
+
+            // roll stats
+            S.sRolls();
+
+            // set each stat to a var
+            int hitpoints = S.hitpoints;
+            int strength = S.strength;
+            int dexterity = S.dexterity;
+            int constitution = S.constitution;
+            int wisdom = S.wisdom;
+            int intelligence = S.intelligence;
+            int charisma = S.charisma;
+        }
+    }
+
+    class Name
+    {
+        public string name()
+        {
+            // Ask for name of character
+            WriteLine("Enter the name of your character: ");
+            string n = ReadLine();
+
+            // check for certain names for an easter egg
+            if(n.Contains("Vin"))
+            {
+                WriteLine("Mommy");
+            }
+            else if(n.Contains("Carson"))
+            {
+                WriteLine("Nice cat pants");
+            }
+            else if(n.Contains("Bert"))
+            {
+                WriteLine("Flex for me bb<3");
+            }
+            else if(n.Contains("Dalton"))
+            {
+                WriteLine("You're trash at apex");
+            }
+            else if(n.Contains("Colin"))
+            {
+                WriteLine("Get mental help");
+            }
+            else if(n.Contains("Ricky"))
+            {
+                WriteLine("Hi dad");
+            }
+            else if(n.Contains("Aj"))
+            {
+                WriteLine("Cutie<3");
+            }
+            else if(n.Contains("Kade"))
+            {
+                WriteLine("Ask me out please please please please please please please please please please please please please please please");
+            }
+            else
+            {
+                WriteLine("Hello {0}", n);
+            }
+            return n;
         }
     }
 
@@ -24,7 +92,7 @@ namespace dnd
             string race = ReadLine();
 
             // Check if the race is valid
-            if(race != Races[0] || race != Races[1] || race != Races[2] || race != Races[3])
+            while(!race.Equals(Races[0]) && !race.Equals(Races[1]) && !race.Equals(Races[2]) && !race.Equals(Races[3]))
             {
                 WriteLine("Race is not valid. Valid races are Gnome, Human, Orc, and Elf");
                 WriteLine("Enter a race: ");
@@ -47,7 +115,7 @@ namespace dnd
             string c = ReadLine();
 
             // Check if inputed class is valid
-            while(c != cS[0] || c != cS[1] || c != cS[2] || c != cS[3])
+            while(!c.Contains(cS[0]) && !c.Contains(cS[1]) && !c.Contains(cS[2]) && !c.Contains(cS[3]))
             {
                 // If class does not equal class in array ask for user input again
                 WriteLine("Class is not valid. Valid classes are Paladin, Rogue, Wizard, and Barbarian");
@@ -61,6 +129,19 @@ namespace dnd
     }
     class Stats
     {
+        public void sRolls()
+        {
+            // class object for berts dice class
+            Dice roll = new Dice();
 
+            // roll for each of the six stats
+            public int hitpoints = 20;
+            public int strength = roll.D20();
+            public int dexterity = roll.D20();
+            public int constitution = roll.D20();
+            public int wisdom = roll.D20();
+            public int intelligence = roll.D20();
+            public int charisma = roll.D20(); 
+        }
     }
 }
