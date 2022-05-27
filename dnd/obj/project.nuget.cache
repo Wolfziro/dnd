@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s6JM4CYX0CEu23Io181Vfz9Z3IvBveWy+3c3Se6KsdjIblmuiscocsAsGjXffroWeHLdMfmgu+WpUtzaGJ6kGQ==",
+  "dgSpecHash": "yXNK81r24T1mqJfHgLTELp/ehPTj99S6WoxCaUY2Tm3cs+ZS7fR+EE6HG23nZ0t78NIWGbrI1CJrj/QshWfW8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Programming\\Desktop\\dnd\\dnd.csproj",
+  "projectFilePath": "C:\\Users\\Programming\\Desktop\\dnd-main\\dnd\\dnd.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
